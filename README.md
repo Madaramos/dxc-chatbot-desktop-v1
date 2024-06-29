@@ -1,4 +1,7 @@
 Etapes pour lancer l'app :
+
+-Entrez les clés OPEN AI et VOYAGE AI dans les fichiers .env et /flask2/app/utils.y
+
 1) créer un env virtuel grâce a la commande :
 py -m venv venv
 2) accéder a l'env virtuel avec la commande :
