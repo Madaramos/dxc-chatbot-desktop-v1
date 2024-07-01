@@ -197,7 +197,7 @@ class DXCApp(ctk.CTk):
 
     def load_user_pdfs(self):
         self.pdf_listbox.delete(0, tk.END)
-        user_folder = os.path.join(r'D:\DXC-flask\flask2\uploads', username)
+        user_folder = os.path.join(r'D:\DXC-flask\flask\uploads', username)
         if os.path.exists(user_folder):
             for filename in os.listdir(user_folder):
                 if filename.endswith('.pdf'):
@@ -212,7 +212,7 @@ class DXCApp(ctk.CTk):
                 messagebox.showerror("Error", "No PDF selected.")
                 return
             selected_file = self.pdf_listbox.get(selected_index)
-            file_path = os.path.join(r'D:\DXC-flask\flask2\uploads', username, selected_file)
+            file_path = os.path.join(r'D:\DXC-flask\flask\uploads', username, selected_file)
             self.display_pdf(file_path)
         except Exception as e:
             messagebox.showerror("Error", f"Failed to load PDF: {str(e)}")
